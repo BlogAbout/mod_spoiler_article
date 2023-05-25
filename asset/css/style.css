@@ -1,0 +1,102 @@
+.mount-sys {
+	padding-top: 40px;
+}
+
+.mount-sys .mount-article {
+	border-top: 2px solid #f3f3f3;
+	border-bottom: 2px solid #f3f3f3;
+}
+
+.mount-sys .mount-article .article-title {
+	display: block;
+	padding: 0 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	position: relative;
+	text-align: left;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.mount-sys .mount-article .article-title:before {
+	content: '';
+	display: block;
+	width: 26px;
+	height: 27px;
+	background: url(../images/arrow-d.png);
+	position: absolute;
+	right: 30px;
+	top: 50%;
+	margin-top: -13px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.mount-sys .mount-article.active .article-title:before {
+	opacity: 0;
+}
+
+.mount-sys .mount-article .article-title h2 {
+	position: relative;
+	top: 0;
+	text-align: left;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	margin: 0px;
+}
+
+.mount-sys .mount-article .article-title h2 .article-date {
+	font-size: 60%;
+	padding: 5px;
+}
+
+.mount-sys .mount-article .article-title:after {
+	content: '';
+	display: block;
+	width: 26px;
+	height: 27px;
+	background: url(../images/arrow-d-b.png);
+	position: absolute;
+	right: 30px;
+	top: 50%;
+	margin-top: -13px;
+	opacity: 0;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.mount-sys .mount-article.active .article-title:after {
+	opacity: 1;
+}
+
+.mount-sys .mount-article .article-content {
+	padding: 0 30px 30px;
+	display: none;
+}
+
+.mount-sys .mount-article .article-content .article-description {
+	display: block;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.mount-sys .mount-article .article-content .article-readmore {
+	display: inline-block;
+}
+
+.mount-sys .mount-article .article-content .article-readmore a {
+	display: block;
+	padding: 10px 15px;
+	background: #000;
+	color: #fff;
+	text-decoration: none;
+}
+
+.mount-sys .mount-article .article-content .article-readmore a:hover {
+	background: #dfdfdf;
+	color: #000;
+}

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" method="upgrade">
+	<name>MOD_SPOILER_ARTICLE</name>
+	<creationDate>Сентябрь 2016</creationDate>
+	<author>А.П.В.</author>
+	<authorEmail>info@blog-about.ru</authorEmail>
+	<copyright>Copyright(C) 2016 Module Spoiler Article</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<version>0.0.8</version>
+	<description>MOD_SPOILER_ARTICLE_XML_DESCRIPTION</description>
+	
+	<files>
+		<filename module="mod_spoiler_article">mod_spoiler_article.php</filename>
+		<filename>mod_spoiler_article.xml</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>asset</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<!-- Основные параметры для модуля -->
+			<fieldset name="basic">
+				<field name="com_categories" type="category" multiple="multiple" extension="com_content" default="" label="MOD_SPOILER_ARTICLE_COM_CATEGORIES" description="MOD_SPOILER_ARTICLE_COM_CATEGORIES_DESC" />
+				<field name="article_description" type="list" label="MOD_SPOILER_ARTICLE_ARTICLE_DESCRIPTION" description="MOD_SPOILER_ARTICLE_ARTICLE_DESCRIPTION_DESC" default="1">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="date_display" type="list" label="MOD_SPOILER_ARTICLE_DATE_DISPLAY" description="MOD_SPOILER_ARTICLE_DATE_DISPLAY_DESC" default="0">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="count_symbol" type="number" label="MOD_SPOILER_ARTICLE_COUNT_SYMBOL" description="MOD_SPOILER_ARTICLE_COUNT_SYMBOL_DESC" default="0" />
+				<field name="article_count" type="number" label="MOD_SPOILER_ARTICLE_ARTICLE_COUNT" description="MOD_SPOILER_ARTICLE_ARTICLE_COUNT_DESC" default="0" />
+				<field name="html_clear" type="list" label="MOD_SPOILER_ARTICLE_HTML_CLEAR" description="MOD_SPOILER_ARTICLE_HTML_CLEAR_DESC" default="0">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="article_readmore" type="list" label="MOD_SPOILER_ARTICLE_ARTICLE_READMORE" description="MOD_SPOILER_ARTICLE_ARTICLE_READMORE_DESC" default="0">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="read_more" type="text" label="MOD_SPOILER_ARTICLE_READ_MORE" description="MOD_SPOILER_ARTICLE_READ_MORE_DESC" default="Подробнее" />
+				<field name="field_sort" type="list" label="MOD_SPOILER_ARTICLE_FIELD_SORT" description="MOD_SPOILER_ARTICLE_FIELD_SORT_DESC" default="1">
+					<option value="1">MOD_SPOILER_ARTICLE_FIELD_SORT_ID</option>
+					<option value="2">MOD_SPOILER_ARTICLE_FIELD_SORT_NAME</option>
+					<option value="3">MOD_SPOILER_ARTICLE_FIELD_SORT_DATE</option>
+					<option value="4">MOD_SPOILER_ARTICLE_FIELD_SORT_ORDERING</option>
+				</field>
+				<field name="type_sort" type="list" label="MOD_SPOILER_ARTICLE_TYPE_SORT" description="MOD_SPOILER_ARTICLE_TYPE_SORT_DESC" default="1">
+					<option value="ASC">MOD_SPOILER_ARTICLE_TYPE_SORT_ASC</option>
+					<option value="DESC">MOD_SPOILER_ARTICLE_TYPE_SORT_DESC</option>
+				</field>
+				<field name="first_show" type="list" label="MOD_SPOILER_ARTICLE_FIRST_SHOW" description="MOD_SPOILER_ARTICLE_FIRST_SHOW_DESC" default="1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="article_class" type="text" label="MOD_SPOILER_ARTICLE_CLASS_ARTICLE" description="MOD_SPOILER_ARTICLE_CLASS_ARTICLE_DESC" default="" />
+			</fieldset>
+			<!-- Дополнительные параметры для модуля -->
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+	<!-- Файлы локализации -->
+	<languages folder="language">
+		<language tag="ru-RU">ru-RU/ru-RU.mod_spoiler_article.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.mod_spoiler_article.sys.ini</language>
+	</languages>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="Module Spoiler Article">http://blog-about.ru/update/mod_spoiler_article_update.xml</server>
+	</updateservers>
+</extension>
