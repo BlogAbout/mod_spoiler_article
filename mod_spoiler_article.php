@@ -1,15 +1,14 @@
 <?php
-
-// No direct access to this file
 defined('_JEXEC') or die;
 
-// Подключаем файл помошника
-require_once dirname(__FILE__).'/helper.php';
+use Joomla\CMS\Helper\ModuleHelper;
 
-// Выполняем getList метод из помошника
-$list = modSpoilerArticleHelper::getList($params);
+if (!defined('DS')) {
+    define('DS', DIRECTORY_SEPARATOR);
+}
 
-// Подключаем файл шаблона с помощью класса JModuleHelper
-require JModuleHelper::getLayoutPath('mod_spoiler_article', $params->get('layout', 'default'));
+require_once dirname(__FILE__) . '/helper.php';
 
-?>
+$list = ModSpoilerArticleHelper::getList($params);
+
+require ModuleHelper::getLayoutPath('mod_spoiler_article', $params->get('layout', 'default'));

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+    <update>
+        <name>Модуль статей под спойлером</name>
+        <description>Модуль позволяет выводить статьи Joomla из указанных категорий в виде спойлера.</description>
+        <element>mod_spoiler_article</element>
+        <type>module</type>
+        <version>0.1.1</version>
+        <infourl title="Module Spoiler Article">
+            https://blog-about.ru/extensions/modul-spojlera-materialov-dlya-joomla-3/
+        </infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">
+                https://blog-about.ru/update/files/mod_spoiler_article_j4_v0.1.1.zip
+            </downloadurl>
+        </downloads>
+        <maintainer>А.П.В.</maintainer>
+        <maintainerurl>http://blog-about.ru</maintainerurl>
+        <section/>
+        <client_id>0</client_id>
+        <client>0</client>
+        <targetplatform name="joomla" version="4.0"/>
+    </update>
+</updates>
