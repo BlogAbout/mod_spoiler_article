@@ -67,7 +67,11 @@ $webAssetManager->registerAndUseStyle('mod_spoiler_article_css', 'modules/mod_sp
 
         unset($id);
     } else {
-        echo \JText::_('MOD_SPOILER_ARTICLE_NO_ARTICLE');
+        if (!$params->get('com_categories')) {
+            echo \JText::_('MOD_SPOILER_ARTICLE_NOT_SELECTED_CATEGORIES');
+        } else {
+            echo \JText::_('MOD_SPOILER_ARTICLE_NO_ARTICLE');
+        }
     }
     ?>
 </div>

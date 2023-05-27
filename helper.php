@@ -5,6 +5,10 @@ class ModSpoilerArticleHelper
 {
     public static function getList($params)
     {
+        if (!$params->get('com_categories')) {
+            return [];
+        }
+
         $categoryId = implode(',', $params->get('com_categories'));
         $db = \JFactory::getDBO();
         $query = $db->getQuery(true);
